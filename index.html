@@ -5,12 +5,14 @@
 	<title>Website Template</title>
 	<link rel="stylesheet" href="./assets/css/styles.css">
 	<style>
+		
 		body {
 			margin: 1rem;
 			background-color: black;
 			color: whitesmoke;
 			font-size: 5rem;
 			overflow: hidden;
+			background: url("assets/img/earth.gif") no-repeat center/cover;
 		}
 		.grid-container {
 			display:grid;
@@ -22,23 +24,25 @@
 		.last {
 			padding-bottom: 2rem;
 			border-bottom: 2px solid rgb(220, 200, 180);
-			
+			margin: 15% 4rem 0 4rem
 		}
+		
+
 	</style>
 </head>
 <body>
 	<div class="grid-container">
-		<div>A</div>
-		<div>radiant</div>
-		<div class="last">young</div>
-		<div>woman</div>
-		<div>to</div>
-		<div>light</div>
-		<div>the</div>
-		<div class="last">darkest</div>
-		<div>corners</div>
-		<div>of</div>
-		<div class="last">winter</div>
+		<div>A bright</div>
+		<div>shining sun</div>
+		<div class="last">falls</div>
+		<div>to the</div>
+		<div>end</div>
+		<div>of the</div>
+		<div>sky</div>
+		<div class="last">Now</div>
+		<div>the moon</div>
+		<div>can</div>
+		<div class="last">shine</div>
 	</div>
 
 	<script>
@@ -67,15 +71,23 @@
 	}
 
 	document.addEventListener("click", randomize);
+	let rotation = 0;
+	document.addEventListener("click", function () {
+	let min = 10;
+	let max = 40;
+	rotation += Math.random() + (max - min) + min;
+	document.body.style.transform = `rotate(${rotation}deg)`;
+	});
 
 	</script>
 		
 
 	<!--<h1>Website Template</h1>
 	<p>Fork and use this template repo (a.k.a. "boilerplate") for any web project</p>
--->
+
 	<img src="assets/img/cat.jpg" alt="" style="max-width: 32rem;">
 
 	<script src="./assets/js/main.js"></script>
+-->
 </body>
 </html>
